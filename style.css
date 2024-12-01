@@ -1,0 +1,221 @@
+/* customizable snowflake styling */
+button {
+    min-width: 150px; /* Set a minimum width */
+    min-height: 50px; /* Set a minimum height */
+    padding: 10px; /* Add padding for better spacing */
+    font-size: 16px; /* Increase font size for better readability */
+    overflow: hidden; /* Prevent overflow of text */
+    text-align: center; /* Center the text */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+.loader button {
+    width: 50%;
+    height: 100px;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    background: center no-repeat #fff;
+    z-index: 9999999999999999999999;
+    font-size: 50px;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    border-radius: .3em;
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4),
+        inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+    border: 1px solid #a55d07;
+    color: rgb(120, 50, 5);
+    text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.golden-btn:focus,
+.golden-btn:hover {
+    background-size: 150% 150%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
+        inset 0 -2px 5px 1px #b17d10,
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    border: 1px solid rgba(165, 93, 7, .6);
+    color: rgba(120, 50, 5, .8);
+}
+
+.golden-btn:active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4),
+        inset 0 -2px 5px 1px #b17d10,
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+}
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: url(img/back.png) center no-repeat #000;
+}
+
+.song {
+    display: none;
+}
+
+body {
+    background-color: #FFDAB9;
+}
+
+img {
+    width: 100%;
+}
+
+.balloon-border {
+    position: fixed;
+    top: 100%;
+    opacity: 0.5;
+    z-index: 99999999;
+}
+
+.area {
+    text-align: center;
+    font-size: 70px;
+    color: #C4515C;
+    letter-spacing: -7px;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: spin 2s ease-out infinite;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+#nae {
+    text-transform: capitalize;
+}
+
+#confetti {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0);
+    }
+
+    25% {
+        transform: rotateZ(10deg);
+    }
+
+    50% {
+        transform: rotateZ(0deg);
+    }
+
+    75% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+.type-wrap {
+    font-size: 25px;
+    color: #C4515C;
+
+}
+
+.cake {
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    padding-top: 250px;
+}
+.photo {
+    position: fixed;
+    width: 100px; /* Adjust size */
+    height: 100px; /* Adjust size */
+    z-index: 10; /* Ensure it appears above other elements */
+    animation: pop 1s ease-in-out infinite;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Make them circular */
+}
+
+.photo-top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.photo-top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.photo-bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.photo-bottom-right {
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Animation for popping effect */
+@keyframes pop {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .photo {
+        width: 70px;
+        height: 70px;
+    }
+}
+.text {
+    font-family: 'Cursive', 'Arial', sans-serif; /* Playful or magical font */
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff7f98; /* Softer pink for a more subdued vibe */
+    text-shadow: 0 0 3px #ff7f98, 0 0 6px #ff3366, 0 0 9px #ff3366, 0 0 12px #ff7f98;
+    background: linear-gradient(90deg, #ffb6c1, #fad0c4, #fbc2eb); /* Softer gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s infinite alternate; /* Slower glow */
+  }
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 3px #ff7f98, 0 0 6px #ff3366, 0 0 9px #ff3366;
+    }
+    100% {
+      text-shadow: 0 0 6px #ff7f98, 0 0 12px #ff3366, 0 0 15px #ff3366, 0 0 18px #ff7f98;
+    }
+  }
+  
+  /* Add subtle hover effect */
+  .text:hover {
+    color: #fff;
+    text-shadow: 0 0 6px #fff, 0 0 12px #ff7f98, 0 0 18px #ff7f98;
+    transform: scale(1.05); /* Slight scaling */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+
+  
