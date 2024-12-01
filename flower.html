@@ -15,26 +15,20 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="loader">
-
-                <button id="play">Click mo beee</button>
-                
-            </div>
+        <div class="loader">
+            <button id="play1">Click mo beee</button>
+            <button id="play2" style="display: none;">mali, dito dapat</button>
+            <button id="play3" style="display: none;">ayy di parin tama</button>
+            <button id="play4" style="display: none;">lalaki kasi tong button</button>
+            <button id="play5" style="display: none;">dito talaga</button>
+            <button id="play6" style="display: none;">luhh di parin?</button>
+            <button id="play7" style="display: none;">tama na HAHAHA nilalaro kona</button>
+            <button id="play8" style="display: none;">once more</button>
+            <button id="play" style="display: none;">Start the birthday page!!</button>
         </div>
-        
-    </div>
-    <div class="snowflakes">
-      <span class="snowflake">❄️</span>
-      <span class="snowflake">❄️</span>
-      <span class="snowflake">❄️</span>
-      <span class="snowflake">❄️</span>
-      <span class="snowflake">❄️</span>
-      <span class="snowflake">❄️</span>
-  </div>
+   
     <audio class="song" controls loop>
         <source src="music.mp3">
-        </source>
         Your browser isn't invited for super fun audio time.
     </audio>
     <canvas id="confetti"></canvas>
@@ -63,6 +57,7 @@
                             <h2>Eyy ka muna Eyyyyy HAHAHAHA</h2>
                             <h2>Don't forget to smileee, I't your special dayy!!</h2>
                             <h2>Sending virtual hugsss!!</h2>
+                            <h2>Pahinge ng shanghaiii</h2>
                             <h2>Ayaiyai I'm your little Butterfly</h2>
 
                         </div>
@@ -92,5 +87,48 @@
 <script src="js/typed.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/main.js"></script>
+<script>
+    const buttons = [
+        "play1", "play2", "play3", "play4",
+        "play5", "play6", "play7", "play8", "play"
+    ];
+
+    const loader = document.querySelector('.loader');
+
+    buttons.forEach((id, index) => {
+        const button = document.getElementById(id);
+
+        button.addEventListener('click', () => {
+            // Hide the current button
+            button.style.display = 'none';
+
+            // Show the next button, if available
+            const nextIndex = index + 1;
+            if (nextIndex < buttons.length) {
+                const nextButton = document.getElementById(buttons[nextIndex]);
+                if (nextButton) {
+                    nextButton.style.display = 'block';
+                    positionButtonRandomly(nextButton);
+                }
+            }
+        });
+    });
+
+    function positionButtonRandomly(button) {
+        const loaderWidth = loader.clientWidth;
+        const loaderHeight = loader.clientHeight;
+        const buttonWidth = button.offsetWidth;
+        const buttonHeight = button.offsetHeight;
+
+        // Generate random positions within bounds
+        const randomX = Math.random() * (loaderWidth - buttonWidth);
+        const randomY = Math.random() * (loaderHeight - buttonHeight);
+
+        button.style.left = `${randomX}px`;
+        button.style.top = `${randomY}px`;
+    }
+</script>
+
 </html>
+
 
